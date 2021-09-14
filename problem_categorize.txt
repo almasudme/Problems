@@ -1,11 +1,12 @@
-Problem : you have to categorize the dataset provided in the sample.txt. There are 6 columns in this dataset.  Note that the columns are not of same width and the data in each row are separated by space " ". 
-DECK  is name of a test. If this test passes The RESULT Column should have an entry called "BLESS".The Comment column is empty. If this test failed there will be comment. You have to categorize all the tests in ters of this comments.
+Problem : you have to categorize the dataset provided in the sample.txt. There are 6 columns in this text file.  Note that the columns are not of same width and the data in each row are separated by space " ". DECK  is name of a test. If this test passes, The RESULT Column should have an entry called "BLESS".The COMMENT column is empty for a BLESS. If this test failed, there would be COMMENT. You have to categorize all the tests in terms of these comments.
 
-This comment has Keywords associated with some value.  For example 40101neg has Identifier USEWAR122 and the value associated with it is 238/265. Dont bother about the values. Create a list of testcases associated with each keyword. Ignore any single letter keyword. Create a table summarizing all 1000 tests based on this keywords.
-If you solve the problem for the first 10 tests in this file. The column would look like this
+Each comment has Keywords associated with some value.  For example 40101neg has Identifier USEWAR222 and the value associated with it is 238/265. Dont bother about the values. Create a list of testcases associated with each keyword. Ignore any single letter keyword. 
+
+Write a python program that will take a filename as input argument : " python your_script.py -f sample_data.txt ". Create a table summarizing all 1000 tests based on this keywords.
+If you solved the problem for the first 10 tests in this file. The column would look like this
 
 
-Keyword 	Number of failures 	Deck Names
-======= 	==================	===========
-COMDISVEC 2			              aabssm1,aabssm1x
-40101neg  1			              40101neg
+Keyword 	  Number of failures 	Deck Names
+======= 	  ==================	===========
+COMDISVEC   2			              aabssm1,aabssm1x
+USEWAR222   1			              40101neg
