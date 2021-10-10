@@ -1,3 +1,5 @@
+# useful explanations: https://stackoverflow.com/questions/22507197/merging-two-sorted-linked-lists-into-one-linked-list-in-python/40794749
+
 class Node:
     def __init__(self, data=None, next=None):
         self.data=data
