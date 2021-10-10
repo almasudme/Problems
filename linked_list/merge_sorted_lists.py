@@ -20,6 +20,21 @@ def merge_two_sorted_lists(head1,head2):
         return head2
     if head2 is None:
         return head1
+    
+    dummy=tail=Node()
+    while (head1 and head2):
+        if head1.data < head2.data:
+            
+            tail.next, head1 = head1,head1.next
+        else:
+            
+            tail.next,head2 = head2,head2.next
+
+        tail=tail.next
+        print(tail.data)
+    tail.next = head1 
+    return dummy.next
+
 
 #===========================
 # Sample code for node creation
@@ -47,6 +62,12 @@ n2=Node("3")
 n1.next=n2
 L2.head=n1
 
-L1.listprint()
-L2.listprint()
+# L1.listprint()
+# L2.listprint()
+
+n = merge_two_sorted_lists(m1,n1)
+L=LinkedList()
+L.head=n
+L.listprint()
+
     
