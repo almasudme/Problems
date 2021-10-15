@@ -5,21 +5,7 @@ We are given a linked list and positions m and n. We need to reverse the linked 
 
 # useful explanations: https://stackoverflow.com/questions/22507197/merging-two-sorted-linked-lists-into-one-linked-list-in-python/40794749
 
-class Node:
-    def __init__(self, data=None, next=None):
-        self.data=data
-        self.next=next
-
-class LinkedList:
-    def __init__(self):
-        self.head=None
-    
-    def listprint(self):
-      printval = self.head
-      while printval is not None:
-         print (printval.data, end=" ")
-         printval = printval.next
-      print("\n")
+from LinkedListClass import Node,LinkedList
 
 def reverse_sublist(L:Node, start: int, finish: int) ->Node:
     dummy=sublist_head=Node(0,L)
@@ -32,15 +18,6 @@ def reverse_sublist(L:Node, start: int, finish: int) ->Node:
         temp=sublist_iter.next
         sublist_iter.next,temp.next,sublist_head.next = temp.next,sublist_head.next,temp
     return dummy.next
-#===========================
-# Sample code for node creation
-# L1=LinkedList()
-# n1=Node("1")
-# n2=Node("Tue")
-# n1.next=n2
-# L1.head=n1
-# L1.listprint()
-#===========================
 
 L1=LinkedList()
 

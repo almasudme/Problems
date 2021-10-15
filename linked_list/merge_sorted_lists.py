@@ -1,20 +1,6 @@
 # useful explanations: https://stackoverflow.com/questions/22507197/merging-two-sorted-linked-lists-into-one-linked-list-in-python/40794749
+from LinkedListClass import Node,LinkedList
 
-class Node:
-    def __init__(self, data=None, next=None):
-        self.data=data
-        self.next=next
-
-class LinkedList:
-    def __init__(self):
-        self.head=None
-    
-    def listprint(self):
-      printval = self.head
-      while printval is not None:
-         print (printval.data, end=" ")
-         printval = printval.next
-      print("\n")
 
 
 def merge_two_sorted_lists(head1,head2):
@@ -38,15 +24,6 @@ def merge_two_sorted_lists(head1,head2):
     return dummy.next
 
 
-#===========================
-# Sample code for node creation
-# L1=LinkedList()
-# n1=Node("1")
-# n2=Node("Tue")
-# n1.next=n2
-# L1.head=n1
-# L1.listprint()
-#===========================
 
 L1=LinkedList()
 L2=LinkedList()
