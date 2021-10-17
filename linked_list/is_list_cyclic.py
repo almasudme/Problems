@@ -21,7 +21,21 @@ f.next=c # This introduces a cycle
 
 L=LinkedList()
 L.head=a
-#L.listprint() # will print infinitely
+# L.listprint() # will print infinitely
+
+def is_cyclic(head):
+    slow=fast=head
+    while  slow and fast:
+        slow=slow.next
+        fast=fast.next.next
+        if slow == fast: return True
+            
+
+    return False
+
+print(is_cyclic(a))
+
+
 
 
 
