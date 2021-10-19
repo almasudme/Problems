@@ -10,7 +10,7 @@ class BinaryTree:
     
     def preorder_traverse(self,root:Node)->None:
         if root:
-            print(f"Preorder: {root.data}")
+            print(f"{root.data}", end=" ")
             self.preorder_traverse(root.left)
             self.preorder_traverse(root.right)
 
@@ -18,7 +18,7 @@ class BinaryTree:
         if root:
             
             self.inorder_traverse(root.left)
-            print(f"inorder: {root.data}")
+            print(f"{root.data}", end=" ")
             self.inorder_traverse(root.right)
 
     def postorder_traverse(self,root:Node)->None:
@@ -26,7 +26,7 @@ class BinaryTree:
             
             self.postorder_traverse(root.left)
             self.postorder_traverse(root.right)
-            print(f"postorder: {root.data}")
+            print(f" {root.data}", end=" ")
     
 
 
